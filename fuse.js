@@ -1,10 +1,8 @@
 const { fusebox, sparky, pluginPostCSS } = require("fuse-box");
 const { pluginTypeChecker } = require("fuse-box-typechecker");
 
-class Context {
-  isProduction;
-  runServer;
-  getConfig(prod) {
+let Context = {
+  getConfig : function(prod) {
     return fusebox({
       target: "browser",
       entry: `./src/index.ts`,
@@ -56,4 +54,4 @@ async function run(ctx) {
   });
 }
 
-run(new Context());
+run(Context);
