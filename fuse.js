@@ -20,7 +20,7 @@ let Context = {
         ignored: ["dist"],
       },
       hmr: { plugin: `./src/fuseHmrPlugin.ts` },
-      devServer: !prod,
+      devServer: { httpServer:{port:8080}},
       plugins: [
         pluginPostCSS(/\.css$/, {
           stylesheet: {
@@ -50,6 +50,7 @@ async function run(ctx) {
 
   const fuse = ctx.getConfig(false);
   await fuse.runDev({
+    port: 8080,
     bundles: { distRoot: `./dist/`, app: "app.js" },
   });
 }
