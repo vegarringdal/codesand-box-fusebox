@@ -14,8 +14,10 @@
     "fuse-box": "^4.0.0-next.430",
     "fuse-box-typechecker": "^3.0.0-next.31",
     "lit-html": "^1.2.1",
-    "node": "14.2.0",
+   
     "tailwindcss": "^1.4.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "node": "14.2.0"
+  }
 }
