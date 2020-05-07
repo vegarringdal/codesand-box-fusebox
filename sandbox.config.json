@@ -3,7 +3,7 @@
   "hardReloadOnChange": false,
   "view": "browser",
   "container": {
-    "port": 4444
+    "port": 8080
   },
   "template": "node"
 }

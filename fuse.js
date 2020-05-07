@@ -50,7 +50,7 @@ async function run(ctx) {
 
   const fuse = ctx.getConfig(false);
   await fuse.runDev({
-    port: 4444,
+    port: 8080,
     bundles: { distRoot: `./dist/`, app: "app.js" }
   });
 }
