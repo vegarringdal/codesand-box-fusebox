@@ -2,25 +2,15 @@ const { fusebox, sparky, pluginPostCSS } = require("fuse-box");
 const { pluginTypeChecker } = require("fuse-box-typechecker");
 
 let Context = {
-  getConfig : function(prod) {
+  getConfig: function (prod) {
     return fusebox({
       target: "browser",
       entry: `./src/index.ts`,
       webIndex: {
         template: `./src/index.html`,
-        publicPath: "./",
-      },
-      cache: {
-        root: `./.cache/`,
-        enabled: !prod,
-      },
-      watcher: {
-        enabled: !prod,
-        include: [`./src/`],
-        ignored: ["dist"],
       },
       hmr: { plugin: `./src/fuseHmrPlugin.ts` },
-      devServer: { httpServer:{port:8080}},
+      devServer:true,
       plugins: [
         pluginPostCSS(/\.css$/, {
           stylesheet: {
@@ -33,16 +23,12 @@ let Context = {
           basePath: "./",
           tsConfigOverride: {
             extends: "./tsconfig.json",
-            compilerOptions: {
-              rootDirs: [`./src`],
-            },
-            exclude: ["**/__tests__"],
           },
         }),
       ],
     });
-  }
-}
+  },
+};
 
 // commen runner for all samples
 async function run(ctx) {
@@ -50,7 +36,6 @@ async function run(ctx) {
 
   const fuse = ctx.getConfig(false);
   await fuse.runDev({
-    port: 8080,
     bundles: { distRoot: `./dist/`, app: "app.js" },
   });
 }

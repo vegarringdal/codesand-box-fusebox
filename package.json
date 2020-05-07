@@ -1,22 +1,21 @@
 {
-    "name": "simple-html-test",
-    "version": "1.0.0",
-    "description": "lit html tools",
-    "scripts": {
-        "start": "node fuse",
-        "main": "node fuse"
-    },
-    "author": "vegar Ringdal",
-    "license": "MIT",
-    "devDependencies": {},
-    "dependencies": {
-        "@simple-html/core": "^1.0.0-alpha.22",
-        "autoprefixer": "^9.7.6",
-        "custom-elements-hmr-polyfill": "^1.0.0",
-        "fuse-box": "^4.0.0-next.430",
-        "fuse-box-typechecker": "^3.0.0-next.31",
-        "lit-html": "^1.2.1",
-        "node": "14.2.0",
-        "tailwindcss": "^1.4.5"
-    }
+  "name": "simple-html-test",
+  "version": "1.0.0",
+  "description": "simple-html",
+  "scripts": {
+    "start": "./node_modules/node/node_modules/.bin/node fuse.js"
+  },
+  "author": "vegar Ringdal",
+  "license": "MIT",
+  "devDependencies": {
+    "@simple-html/core": "^1.0.0-alpha.22",
+    "autoprefixer": "^9.7.6",
+    "custom-elements-hmr-polyfill": "^1.0.0",
+    "fuse-box": "^4.0.0-next.430",
+    "fuse-box-typechecker": "^3.0.0-next.31",
+    "lit-html": "^1.2.1",
+    "node": "14.2.0",
+    "tailwindcss": "^1.4.5"
+  },
+  "dependencies": {}
 }
