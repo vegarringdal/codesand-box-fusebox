@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "simple-html",
   "scripts": {
-    "start": "./node_modules/node/node_modules/.bin/node fuse.js"
+    "start": "./node_modules/node/node_modules/.bin/node ./fuse.js"
   },
   "author": "vegar Ringdal",
   "license": "MIT",
